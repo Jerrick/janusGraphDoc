@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [第一章 简介](chapter1/README.md)
-    * [第一节 JanusGraph的好处](chapter1/seciont1.md)
+    * [第一节 JanusGraph的好处](chapter1/section1.md)
     * [第二节 架构概述](chapter1/section2.md)
     * [第三节 起步](chapter1/section3.md)
 * [第二章 JanusGraph基础](chapter2/README.md)
