@@ -15,8 +15,7 @@ JanusGraph是为了满足海量图数据的存储和处理而设计，针对图�
 * 多种图形级别的配置，轻松进行性能调优。
 * 以顶点为中心的索引提供了顶点级别的查询来缓解臭名昭着的超级节点问题。
 * 优化磁盘以便提高存储效率和访问速度。
-* 在自由Apache 2许可下开源。
-
+* 基于Apache 2 license开源，比较自由。
 
 ## 1.2. JanusGraph与Apache Cassandra的好处
 ## 1.3. JanusGraph与HBase结合的好处
