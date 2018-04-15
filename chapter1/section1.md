@@ -1,7 +1,7 @@
 # 第一节 JanusGraph的好处
 
-JanusGraph是为了满足海量图数据的存储和处理而设计，针对图数据的实时遍历和分析查询是JanusGraph的基础优势。
-本节将讨论JanusGraph及其持久性解决方案的各种特定优势。
+JanusGraph主要是为了满足海量图数据的存储和处理而设计，针对图数据的实时遍历和分析查询是JanusGraph的主要优势。
+本节将讨论JanusGraph及其持久化方案的各种特定优势。
 
 ## 1.1. JanusGraph的常见好处
 
@@ -17,6 +17,35 @@ JanusGraph是为了满足海量图数据的存储和处理而设计，针对图�
 * 优化磁盘以便提高存储效率和访问速度。
 * 基于Apache 2 license开源，比较自由。
 
-## 1.2. JanusGraph与Apache Cassandra的好处
+## 1.2. JanusGraph与Apache Cassandra结合的好处
+
+* 高可用，没用单点故障问题。
+* 因为没有Master/Slave架构，所以也不存在读写瓶颈。
+* 弹性可扩展，允许引入和移除机器。
+* 缓存层确保热数据在内存中可用。
+* 通过向集群添加更多机器来增加缓存的大小。
+* 与Apache Hadoop继承。
+* 基于Apache 2 license开源。
+
 ## 1.3. JanusGraph与HBase结合的好处
+
+* 与Apache Hadoop生态系统紧密集成。
+* 原生支持强一致性。
+* 线性可扩展。
+* 严格一致的读写。
+* 通过MapReduce处理HBase表有丰富的接口。
+* 支持通过JMX导入监控指标。
+* 基于Apache 2 license开源。
+
+
 ## 1.4. JanusGraph和CAP定理
+
+
+在使用数据库时，应该充分考虑 [CAP定理](https://baike.baidu.com/item/CAP%E5%8E%9F%E5%88%99/5712863?fr=aladdin)（C=一致性，A=可用性，P=分区容错性）。 
+JanusGraph可以支持三种后端存储：Apache Cassandra，Apache HBase和Oracle Berkeley DB(Java版)。 
+需要注意的是BerkeleyDB(Java版)是一个非分布式数据库，通常仅用于测试或者研究中。
+
+在CAP的选择上，HBase选择了CP，实现了强一致性，但是降低了可用性； 
+Cassandra更倾向于AP，但是可以通过配置调节，并不是固定的最终一致性。
+
+更多讨论请查看[cassandra与hbase的利弊分析？适用场景？社区环境？](https://www.zhihu.com/question/20152327)
