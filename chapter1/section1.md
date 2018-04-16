@@ -45,7 +45,12 @@ JanusGraph主要是为了满足海量图数据的存储和处理而设计，针�
 JanusGraph可以支持三种后端存储：Apache Cassandra，Apache HBase和Oracle Berkeley DB(Java版)。 
 需要注意的是BerkeleyDB(Java版)是一个非分布式数据库，通常仅用于测试或者研究中。
 
-在CAP的选择上，HBase选择了CP，实现了强一致性，但是降低了可用性； 
-Cassandra更倾向于AP，但是可以通过配置调节，并不是固定的最终一致性。
+在CAP的选择上，HBase选择了CP，实现了强一致性，但是降低了可用性，RegionServer的故障会影响读写可用性； 
+Cassandra更倾向于AP，基于Quorum Consistency，代价是读取时为了获取完整/正确结果时的read repair.
+
+Cassandra可以通过配置支持差不多十种不同级别的一致性，“可以支持”但不意味着它擅长这些场景，原来的优势可能荡然无存。
+HBase在高可用性方面也做了一些努力，如Region Replica特性，提升Read的高可用性，但会牺牲Read的一致性。
+
+>特别感谢：毕杰山老师的指导
 
 更多讨论请查看[cassandra与hbase的利弊分析？适用场景？社区环境？](https://www.zhihu.com/question/20152327)
