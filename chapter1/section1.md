@@ -1,9 +1,9 @@
-# 第一节 JanusGraph的好处
+# 第一节 JanusGraph的优点
 
 JanusGraph主要是为了满足海量图数据的存储和处理而设计，针对图数据的实时遍历和分析查询是JanusGraph的主要优势。
 本节将讨论JanusGraph及其持久化方案的各种特定优势。
 
-## 1.1. JanusGraph的常见好处
+## 1.1. JanusGraph的常见优点
 
 * 支持大图，JanusGraph支持横向扩展，存储能力与集群中的机器数量成比例。
 * 支持高并发事务和图计算。 JanusGraph的事务处理能力随着集群中的机器数量而变化，在巨大的图上的复杂遍历查询可以在毫秒级响应。
@@ -17,7 +17,7 @@ JanusGraph主要是为了满足海量图数据的存储和处理而设计，针�
 * 优化磁盘以便提高存储效率和访问速度。
 * 基于Apache 2 license开源，比较自由。
 
-## 1.2. JanusGraph与Apache Cassandra结合的好处
+## 1.2. JanusGraph与Apache Cassandra结合的优点
 
 * 高可用，没用单点故障问题。
 * 因为没有Master/Slave架构，所以也不存在读写瓶颈。
@@ -27,7 +27,7 @@ JanusGraph主要是为了满足海量图数据的存储和处理而设计，针�
 * 与Apache Hadoop继承。
 * 基于Apache 2 license开源。
 
-## 1.3. JanusGraph与HBase结合的好处
+## 1.3. JanusGraph与HBase结合的优点
 
 * 与Apache Hadoop生态系统紧密集成。
 * 原生支持强一致性。
